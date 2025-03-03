@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Mixing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <audio id="correct" src="level-up-191997.mp3"></audio>
+    <div class="container">
+      <h1>Color Mixing Game</h1>
+      <p id="feedback">not close yet! keep trying</p>
+      <div class="color-box">
+        <div id="target-color">
+          <span>target</span>
+        </div>
+        <div id="mixed-color">
+          <span>your mix</span>
+        </div>
+      </div>
+      <div class="rgb-controls">
+        <div class="slider-container">
+          <label for="red">Red:</label>
+          <input type="range" id="red" min="0" max="255" value="0" />
+        </div>
+        <div class="slider-container">
+          <label for="green">Green:</label>
+          <input type="range" id="green" min="0" max="255" value="0" />
+        </div>
+        <div class="slider-container">
+          <label for="blue">Blue:</label>
+          <input type="range" id="blue" min="0" max="255" value="0" />
+        </div>
+      </div>
+      <button id="check-button">Check</button>
+    </div>
+    <div id="message">
+      <p class="popup-message">
+        Awesome! your match was
+        <span id="perc" style="color: rgb(38, 228, 0)"></span> correct
+      </p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
