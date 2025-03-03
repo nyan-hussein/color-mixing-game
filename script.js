@@ -43,6 +43,9 @@ function checkColor() {
         document.removeEventListener("click", removeMessage);
       });
     }, 100);
+    document.getElementById("red").value = 0;
+    document.getElementById("green").value = 0;
+    document.getElementById("blue").value = 0;
   } else {
      document.getElementById("feedback").style.display = "block";
     setTimeout(() => {
