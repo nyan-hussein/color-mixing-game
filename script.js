@@ -20,6 +20,7 @@ document.getElementById("check-button").addEventListener("click", checkColor);
 function checkColor() {
   const result = calculate();
   if (result > 85) {
+     document.getElementById("feedback").style.display = "none";
     document.getElementById("perc").textContent = result.toFixed(1) + "%";
     document.querySelector(".container").classList.add("message-background");
     const m = document.getElementById("message");
@@ -43,7 +44,10 @@ function checkColor() {
       });
     }, 100);
   } else {
-    document.getElementById("feedback").style.display = "block";
+     document.getElementById("feedback").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("feedback").style.display = "none";
+    }, 5000);
   }
 }
 
